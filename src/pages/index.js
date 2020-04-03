@@ -13,6 +13,11 @@ export default () => {
                         id
                         title
                         colour
+                        featuredImages {
+                            file {
+                              url
+                            }
+                        }
                     }
                 }
                 contentfulHome {
@@ -27,7 +32,10 @@ export default () => {
             <h1>{data.contentfulHome.title}</h1>
             <ul>
                 {data.allContentfulWork.nodes.map(node =>(
-                    <li style={{color:node.colour}} key={node.id}>{node.title}</li>
+                    <li style={{color:node.colour}} key={node.id}>
+                        <h3>{node.title}</h3>
+                        <img src={node.featuredImages[0].file.url} title={node.title}/>
+                    </li>
                 ))}
             </ul>
         </div>
