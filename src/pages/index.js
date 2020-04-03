@@ -15,13 +15,16 @@ export default () => {
                         colour
                     }
                 }
+                contentfulHome {
+                    title
+                }
             }
         `
     )
     console.log(data)
     return (
         <div>
-            <h1>no scope</h1>
+            <h1>{data.contentfulHome.title}</h1>
             <ul>
                 {data.allContentfulWork.nodes.map(node =>(
                     <li style={{color:node.colour}} key={node.id}>{node.title}</li>
