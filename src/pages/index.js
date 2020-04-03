@@ -33,8 +33,8 @@ export default () => {
             <ul>
                 {data.allContentfulWork.nodes.map(node =>(
                     <li style={{color:node.colour}} key={node.id}>
-                        <h3>{node.title}</h3>
-                        <img src={node.featuredImages[0].file.url} title={node.title}/>
+                        <h2>{node.title}</h2>
+                        {node.featuredImages.map(image => <img key={node.title} src={image.file.url}/>)}
                     </li>
                 ))}
             </ul>
