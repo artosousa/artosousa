@@ -1,4 +1,5 @@
 import React from 'react'
+import { Box, Image, Text } from "@chakra-ui/core";
 import {
     graphql,
     useStaticQuery
@@ -16,7 +17,9 @@ export default () => {
                         featuredImages {
                             file {
                               url
+                              fileName
                             }
+                            contentful_id
                         }
                     }
                 }
@@ -33,8 +36,22 @@ export default () => {
             <ul>
                 {data.allContentfulWork.nodes.map(node =>(
                     <li style={{color:node.colour}} key={node.id}>
-                        <h2>{node.title}</h2>
-                        {node.featuredImages.map(image => <img key={node.title} src={image.file.url}/>)}
+                            <Box 
+                            bg="tomato" 
+                            w="100%" 
+                            color="white"
+                            fontSize="m"
+                            borderWidth="1px"
+                            borderWidth="1px" 
+                            rounded="lg"
+                            d="flex" 
+                            mt="2" 
+                            alignItems="center"
+                            justifyContent="center"
+                        >
+                            <Text fontSize="xl">{node.title}</Text>
+                            {node.featuredImages.map(image => <Image key={image.contentful_id} alt={image.fileName} src={image.file.url}/>)}
+                        </Box>
                     </li>
                 ))}
             </ul>
