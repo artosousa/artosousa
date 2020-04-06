@@ -37,8 +37,9 @@ const Project = props => {
             </Text>
           </Box>
         </Box>
-        <Box>
+        <Box w="82%" mx="auto" marginTop="-227px">
           <Stack isInline spacing={8}>
+            {console.log(data)}
             {data.featuredImages.map(image => (
               <Image
                 key={image.file.fileName}
@@ -52,6 +53,7 @@ const Project = props => {
     </>
   );
 };
+
 Project.propTypes = {
   data: PropTypes.array
 };
