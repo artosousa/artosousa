@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Box, Flex, Image, ListItem, Text} from '@chakra-ui/core';
+import linkImg from '../assets/linkImg.png';
+import {Box, Flex, Image, Link, ListItem, Text} from '@chakra-ui/core';
 
 const Project = props => {
   const {data} = props;
@@ -39,25 +40,47 @@ const Project = props => {
         </Box>
         <Box w="82%" mx="auto" marginTop="-227px">
           <Flex spacing={3}>
-            {data.featuredImages.length > 1
-              ? data.featuredImages.map(image => (
-                  <Flex
-                    flex="1"
-                    flexDir="column"
-                    mx="0.5em"
-                    key={image.file.fileName}
-                  >
-                    <Image alt={image.file.fileName} src={image.file.url} />
-                  </Flex>
-                ))
-              : data.featuredImages.map(image => (
-                  <Image
-                    key={image.file.fileName}
-                    alt={image.file.fileName}
-                    src={image.file.url}
-                  />
-                ))}
+            {data.featuredImages.map(image => (
+              <Flex
+                flex="1"
+                flexDir="column"
+                mx="0.5em"
+                key={image.file.fileName}
+              >
+                <Image
+                  zIndex="2"
+                  alt={image.file.fileName}
+                  src={image.file.url}
+                />
+              </Flex>
+            ))}
           </Flex>
+        </Box>
+        <Box>
+          <Text>
+            <Link
+              pos="relative"
+              w="16%"
+              float="right"
+              bg="#f87d50"
+              color="#fff"
+              zIndex="1"
+              p="40px 20px 20px 20px"
+              marginTop="-20px"
+              href={data.link}
+              isExternal
+            >
+              Live Project
+              <Image
+                src={linkImg}
+                float="right"
+                pos="relative"
+                marginRight="17px"
+                marginTop="-15px"
+                w="32px"
+              />
+            </Link>
+          </Text>
         </Box>
       </ListItem>
     </>
