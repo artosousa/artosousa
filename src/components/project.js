@@ -60,13 +60,13 @@ const Project = props => {
           <Text>
             <Link
               pos="relative"
-              w="16%"
+              w="25%"
               float="right"
               bg="#f87d50"
               color="#fff"
               zIndex="1"
               p="40px 20px 20px 20px"
-              marginTop="-20px"
+              marginTop="-30px"
               href={data.link}
               isExternal
             >
@@ -75,7 +75,7 @@ const Project = props => {
                 src={linkImg}
                 float="right"
                 pos="relative"
-                marginRight="17px"
+                marginRight="8px"
                 marginTop="-15px"
                 w="32px"
               />
