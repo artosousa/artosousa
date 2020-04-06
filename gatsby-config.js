@@ -5,11 +5,19 @@ dotenv.config();
 module.exports = {
   plugins: [
     {
+      resolve: 'gatsby-plugin-google-fonts',
+      options: {
+        fonts: ['Josefin+Sans'],
+        display: 'swap'
+      }
+    },
+    {
       resolve: 'gatsby-plugin-chakra-ui',
       options: {
         isUsingColorMode: false
       }
     },
+
     'gatsby-transformer-remark',
     {
       resolve: 'gatsby-source-contentful',

@@ -1,10 +1,10 @@
 import Project from './project';
+import PropTypes from 'prop-types';
 import React from 'react';
 import {Box, List} from '@chakra-ui/core';
 
 const Projects = props => {
   const {data} = props;
-  console.log(data);
   return (
     <>
       <Box maxW="containers.xl" mx="auto">
@@ -18,4 +18,7 @@ const Projects = props => {
   );
 };
 
+Projects.propTypes = {
+  data: PropTypes.array
+};
 export default Projects;

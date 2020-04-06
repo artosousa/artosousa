@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React from 'react';
 import headerBG from '../assets/heroBG.jpg';
 import rehypeReact from 'rehype-react';
@@ -24,7 +25,6 @@ const renderAst = new rehypeReact({
 
 const Hero = props => {
   const {data} = props;
-  console.log(data);
   return (
     <>
       <Flex
@@ -47,4 +47,7 @@ const Hero = props => {
   );
 };
 
+Hero.propTypes = {
+  data: PropTypes.array
+};
 export default Hero;
