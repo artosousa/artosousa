@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import {Box, Image, ListItem, Stack, Text} from '@chakra-ui/core';
+import {Box, Flex, Image, ListItem, Text} from '@chakra-ui/core';
 
 const Project = props => {
   const {data} = props;
@@ -38,16 +38,25 @@ const Project = props => {
           </Box>
         </Box>
         <Box w="82%" mx="auto" marginTop="-227px">
-          <Stack isInline spacing={8}>
-            {console.log(data)}
-            {data.featuredImages.map(image => (
-              <Image
-                key={image.file.fileName}
-                alt={image.file.fileName}
-                src={image.file.url}
-              />
-            ))}
-          </Stack>
+          <Flex spacing={3}>
+            {data.featuredImages.length > 1
+              ? data.featuredImages.map(image => (
+                  <Image
+                    w="19%"
+                    mx="0.5rem"
+                    key={image.file.fileName}
+                    alt={image.file.fileName}
+                    src={image.file.url}
+                  />
+                ))
+              : data.featuredImages.map(image => (
+                  <Image
+                    key={image.file.fileName}
+                    alt={image.file.fileName}
+                    src={image.file.url}
+                  />
+                ))}
+          </Flex>
         </Box>
       </ListItem>
     </>
@@ -55,7 +64,7 @@ const Project = props => {
 };
 
 Project.propTypes = {
-  data: PropTypes.array
+  data: PropTypes.object
 };
 
 export default Project;

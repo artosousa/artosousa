@@ -19,6 +19,6 @@ const Projects = props => {
 };
 
 Projects.propTypes = {
-  data: PropTypes.array
+  data: PropTypes.object
 };
 export default Projects;

@@ -48,6 +48,6 @@ const Hero = props => {
 };
 
 Hero.propTypes = {
-  data: PropTypes.array
+  data: PropTypes.object
 };
 export default Hero;
