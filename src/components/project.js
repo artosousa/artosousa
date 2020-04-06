@@ -41,13 +41,14 @@ const Project = props => {
           <Flex spacing={3}>
             {data.featuredImages.length > 1
               ? data.featuredImages.map(image => (
-                  <Image
-                    w="19%"
-                    mx="0.5rem"
+                  <Flex
+                    flex="1"
+                    flexDir="column"
+                    mx="0.5em"
                     key={image.file.fileName}
-                    alt={image.file.fileName}
-                    src={image.file.url}
-                  />
+                  >
+                    <Image alt={image.file.fileName} src={image.file.url} />
+                  </Flex>
                 ))
               : data.featuredImages.map(image => (
                   <Image
