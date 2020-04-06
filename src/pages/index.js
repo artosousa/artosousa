@@ -49,7 +49,7 @@ export default () => {
         `
     )
     return (
-        <>
+        <> 
             <Hero data={data.hero}/>
             <Projects data={data.projects}/>
         </>
