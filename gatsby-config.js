@@ -4,7 +4,12 @@ dotenv.config()
 // In your gatsby-config.js
 module.exports = {
     plugins: [
-        "gatsby-plugin-chakra-ui",
+        {
+            resolve: 'gatsby-plugin-chakra-ui',
+            options: {
+              isUsingColorMode: false
+            }
+        },
         {
             resolve: `gatsby-transformer-remark`,
             options: {
