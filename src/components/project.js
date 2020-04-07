@@ -8,8 +8,16 @@ const Project = props => {
 
   return (
     <>
-      <ListItem key={data.id} marginY="250px">
-        <Box bg="#f87d50" h="150px" maxW="600px" p="20px" height="295px">
+      <ListItem key={data.id} marginY="250px" h="100vh">
+        <Box
+          bg="#f87d50"
+          h="150px"
+          maxW="600px"
+          p="20px"
+          height="295px"
+          data-sal="slide-right"
+          data-sal-easing="ease"
+        >
           <Box h="100%" w="40px" float="left">
             <Text
               fontSize="1.3rem"
@@ -49,6 +57,9 @@ const Project = props => {
                 key={image.file.fileName}
               >
                 <Image
+                  data-sal="slide-up"
+                  data-sal-delay="15"
+                  data-sal-easing="ease"
                   zIndex="2"
                   h="auto"
                   w="90%"
@@ -64,6 +75,9 @@ const Project = props => {
         <Box>
           <Text>
             <Link
+              data-sal="slide-left"
+              data-sal-delay="50"
+              data-sal-easing="ease"
               pos="relative"
               w="25%"
               float="right"

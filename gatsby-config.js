@@ -4,6 +4,20 @@ dotenv.config();
 // In your gatsby-config.js
 module.exports = {
   plugins: [
+    'gatsby-plugin-scroll-reveal',
+    {
+      resolve: 'gatsby-plugin-scroll-indicator',
+      options: {
+        // Configure color of the scroll indicator
+        color: '#f87d50',
+        // Height of the scroll indicator
+        height: '5px',
+        // Configure paths where the scroll indicator will appear
+        paths: ['/'],
+        // Configure the z-index of the indicator element
+        zIndex: '9999'
+      }
+    },
     {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
