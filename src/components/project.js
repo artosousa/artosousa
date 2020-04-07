@@ -74,6 +74,7 @@ const Project = props => {
               marginTop="-30px"
               href={data.link}
               isExternal
+              title={data.title}
             >
               Live Project
               <Image
