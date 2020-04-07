@@ -6,9 +6,9 @@ const Brands = props => {
   const {data} = props;
   return (
     <>
-      <Box maxW="1280px" minW="420px" mx="auto" pos="relative" zIndex="2">
+      <Box w="90%" minW="420px" mx="auto" pos="relative" zIndex="2">
         <Heading as="h1" color="#f87d50" my="24px">
-          Some Brands I&apos;ve work on
+          Some Brands I&apos;ve worked with.
         </Heading>
         <Flex
           zIndex="2"
@@ -45,7 +45,7 @@ const Brands = props => {
         h="8vh"
         float="right"
         zIndex="1"
-        right="10%"
+        right="2%"
         marginTop="-2%"
         position="relative"
       ></Box>
