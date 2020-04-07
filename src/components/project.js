@@ -15,7 +15,7 @@ const Project = props => {
           maxW="600px"
           p="20px"
           height="295px"
-          data-sal="slide-right"
+          data-sal="slide-up"
           data-sal-easing="ease"
         >
           <Box h="100%" w="40px" float="left">
@@ -58,7 +58,6 @@ const Project = props => {
               >
                 <Image
                   data-sal="slide-up"
-                  data-sal-delay="15"
                   data-sal-easing="ease"
                   zIndex="2"
                   h="auto"
@@ -75,7 +74,7 @@ const Project = props => {
         <Box>
           <Text>
             <Link
-              data-sal="slide-left"
+              data-sal="slide-up"
               data-sal-delay="50"
               data-sal-easing="ease"
               pos="relative"
