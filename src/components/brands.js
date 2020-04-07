@@ -4,12 +4,11 @@ import {Box, Flex, Heading, Image} from '@chakra-ui/core';
 
 const Brands = props => {
   const {data} = props;
-  console.log(data);
   return (
     <>
       <Box maxW="1280px" minW="420px" mx="auto" pos="relative" zIndex="2">
         <Heading as="h1" color="#f87d50" my="24px">
-          Brands I've Worked With
+          Some Brands I&apos;ve work on
         </Heading>
         <Flex
           zIndex="2"
