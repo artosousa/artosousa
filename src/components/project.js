@@ -75,7 +75,6 @@ const Project = props => {
           <Text>
             <Link
               data-sal="slide-up"
-              data-sal-delay="50"
               data-sal-easing="ease"
               pos="relative"
               w="25%"
