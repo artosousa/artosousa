@@ -7,7 +7,7 @@ const Projects = props => {
   const {data} = props;
   return (
     <>
-      <Box maxW="containers.xl" mx="auto">
+      <Box maxW="100%" mx="auto">
         <List>
           {data.work.map((project, index) => {
             return <Project key={index} data={project} />;

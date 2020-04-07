@@ -7,7 +7,7 @@ const Project = props => {
   const {data} = props;
   return (
     <>
-      <ListItem key={data.id} marginY="150px">
+      <ListItem key={data.id} marginY="250px">
         <Box bg="#f87d50" h="150px" maxW="600px" p="20px" height="295px">
           <Box h="100%" w="40px" float="left">
             <Text
@@ -38,7 +38,7 @@ const Project = props => {
             </Text>
           </Box>
         </Box>
-        <Box w="82%" mx="auto" marginTop="-227px">
+        <Box w="80%" mx="auto" marginTop="-227px">
           <Flex spacing={3}>
             {data.featuredImages.map(image => (
               <Flex
@@ -49,6 +49,9 @@ const Project = props => {
               >
                 <Image
                   zIndex="2"
+                  h="auto"
+                  w="90%"
+                  mx="auto"
                   alt={image.file.fileName}
                   src={image.file.url}
                 />
