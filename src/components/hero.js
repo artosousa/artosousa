@@ -3,7 +3,7 @@ import React from 'react';
 import headerBG from '../assets/heroBG.jpg';
 //import headerVHS from '../assets/headerVHS.webm';
 import rehypeReact from 'rehype-react';
-import {Box, Flex, Heading, Image} from '@chakra-ui/core';
+import {Flex, Heading, Image} from '@chakra-ui/core';
 
 const renderAst = new rehypeReact({
   createElement: React.createElement,

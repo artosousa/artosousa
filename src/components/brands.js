@@ -6,16 +6,14 @@ const Brands = props => {
   const {data} = props;
   return (
     <>
-      <Box
-        w="90%"
-        minW="420px"
-        mx="auto"
-        pos="relative"
-        zIndex="2"
-        data-sal="slide-up"
-        data-sal-easing="ease"
-      >
-        <Heading as="h1" color="#f87d50" my="24px">
+      <Box w="90%" minW="420px" mx="auto" pos="relative" zIndex="2">
+        <Heading
+          as="h1"
+          color="#f87d50"
+          my="24px"
+          data-sal="slide-up"
+          data-sal-easing="ease"
+        >
           Some Brands I&apos;ve worked with.
         </Heading>
         <Flex
@@ -24,6 +22,9 @@ const Brands = props => {
           justifyContent="center"
           w="100%"
           backgroundColor="white"
+          data-sal="slide-up"
+          data-sal-easing="ease"
+          data-sal-delay="50"
         >
           {data.brands.map(brand => (
             <Flex
