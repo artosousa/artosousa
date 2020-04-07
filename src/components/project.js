@@ -10,7 +10,7 @@ const Project = props => {
     <>
       <ListItem key={data.id} marginY="250px" h="100vh">
         <Box
-          bg="#ff6f4f"
+          bg="#f87d50"
           h="150px"
           maxW="600px"
           p="20px"
@@ -79,7 +79,7 @@ const Project = props => {
               pos="relative"
               w="25%"
               float="right"
-              bg="#ff6f4f"
+              bg="#f87d50"
               color="#fff"
               zIndex="1"
               p="40px 20px 20px 20px"
