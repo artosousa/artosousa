@@ -5,6 +5,7 @@ import {Box, Flex, Image, Link, ListItem, Text} from '@chakra-ui/core';
 
 const Project = props => {
   const {data} = props;
+
   return (
     <>
       <ListItem key={data.id} marginY="250px">

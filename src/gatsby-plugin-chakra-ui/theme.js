@@ -6,5 +6,6 @@ export default {
     body: 'Josefin Sans',
     heading: 'Josefin Sans',
     mono: 'Josefin Sans'
-  }
+  },
+  backgroundColor: '#000'
 };
