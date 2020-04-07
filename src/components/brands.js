@@ -6,8 +6,16 @@ const Brands = props => {
   const {data} = props;
   return (
     <>
-      <Box w="90%" minW="420px" mx="auto" pos="relative" zIndex="2">
-        <Heading as="h1" color="#f87d50" my="24px">
+      <Box
+        w="90%"
+        minW="420px"
+        mx="auto"
+        pos="relative"
+        zIndex="2"
+        data-sal="slide-up"
+        data-sal-easing="ease"
+      >
+        <Heading as="h1" color="#ff6f4f" my="24px">
           Some Brands I&apos;ve worked with.
         </Heading>
         <Flex
@@ -40,7 +48,7 @@ const Brands = props => {
       </Box>
       <Box
         borderWidth="10px"
-        borderColor="#f87d50"
+        borderColor="#ff6f4f"
         w="10vw"
         h="8vh"
         float="right"
