@@ -36,8 +36,6 @@ const Hero = props => {
         bgPos="center"
         bgRepeat="no-repeat"
         color="white"
-        borderBottomLeftRadius="50px"
-        borderBottomRightRadius="50px"
       >
         <Image h="50%" maxH="320px" src={data.logo.file.url} />
         <Heading as="h1" textAlign="center" fontSize="8vh" marginY="2rem">
