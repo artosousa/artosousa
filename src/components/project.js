@@ -88,7 +88,7 @@ const Project = props => {
               isExternal
               title={data.title}
             >
-              Live Project
+              View Project
               <Image
                 src={linkImg}
                 float="right"

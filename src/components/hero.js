@@ -34,8 +34,7 @@ const Hero = props => {
         direction="column"
         h="100vh"
         bgImage={`url(${headerBG})`}
-        bgPos="center"
-        bgRepeat="no-repeat"
+        backgroundSize="cover"
         color="white"
       >
         <Image h="50%" maxH="320px" src={data.logo.file.url} />
