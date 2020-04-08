@@ -15,10 +15,10 @@ const Footer = () => {
         color="#f87d50"
         my="auto"
       >
-        <Image src={Logo} h="20%" />
+        <Image src={Logo} h="20%" marginTop="25vh" />
         <Heading as="h1" textAlign="center" fontSize="8vh" marginY="4rem">
           You should call me on my cell phone ... <br />
-          Actually just an &nbsp;
+          Actually just an&nbsp;
           <Link
             borderBottom="5px dashed"
             href="mailto:artosousa@gmail.com"
