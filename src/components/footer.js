@@ -26,7 +26,7 @@ const Footer = () => {
           >
             email
           </Link>
-          &nbsp;is fine
+          &nbsp;will do just fine.
         </Heading>
       </Flex>
     </>
