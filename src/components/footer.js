@@ -19,7 +19,11 @@ const Footer = () => {
         <Heading as="h1" textAlign="center" fontSize="8vh" marginY="4rem">
           You should call me on my cell phone ... <br />
           Actually just an &nbsp;
-          <Link textDecoration="underline" href="mailto:artosousa@gmail.com">
+          <Link
+            borderBottom="5px dashed"
+            href="mailto:artosousa@gmail.com"
+            _hover={{textDecor: 'none', borderBottom: '5px solid'}}
+          >
             email
           </Link>
           &nbsp;is fine
