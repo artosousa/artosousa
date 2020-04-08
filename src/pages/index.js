@@ -1,5 +1,6 @@
 import Brands from '../components/brands';
 import Hero from '../components/hero';
+import PersonalProjects from '../components/personal-projects';
 import Projects from '../components/projects';
 import React from 'react';
 import {Box} from '@chakra-ui/core';
@@ -53,6 +54,21 @@ export default function Index() {
             }
           }
         }
+        contentfulPersonalProjectsList {
+          title
+          projects {
+            id
+            projectTitle
+            projectLink
+            projectType
+            projectImage {
+              file {
+                url
+                fileName
+              }
+            }
+          }
+        }
       }
     `
   );
@@ -70,6 +86,7 @@ export default function Index() {
         <Hero data={data.hero} />
         <Projects data={data.projects} />
         <Brands data={data.contentfulBrandList} />
+        <PersonalProjects data={data.contentfulPersonalProjectsList} />
       </Box>
     </>
   );
