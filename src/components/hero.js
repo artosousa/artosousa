@@ -12,10 +12,10 @@ const renderAst = new rehypeReact({
       return (
         <Heading
           as="h3"
-          w="65%"
+          w={['80%', '80%', '65%']}
           mx="auto"
           fontWeight="300"
-          fontSize="4vh"
+          fontSize={['2.5vh', '2.5vh', '4vh']}
           {...props}
           textAlign="center"
         />
@@ -37,8 +37,17 @@ const Hero = props => {
         backgroundSize="cover"
         color="white"
       >
-        <Image h="50%" maxH="320px" src={data.logo.file.url} />
-        <Heading as="h1" textAlign="center" fontSize="8vh" marginY="2rem">
+        <Image
+          h={['25%', '30%', '50%']}
+          maxH="320px"
+          src={data.logo.file.url}
+        />
+        <Heading
+          as="h1"
+          textAlign="center"
+          fontSize={['4vh', '4vh', '8vh']}
+          marginY="2rem"
+        >
           {data.mainTag}
         </Heading>
         {renderAst(data.subHeading.childMarkdownRemark.htmlAst)}

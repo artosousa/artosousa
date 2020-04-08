@@ -15,8 +15,13 @@ const Footer = () => {
         color="#f87d50"
         my="auto"
       >
-        <Image src={Logo} h="20%" marginTop="25vh" />
-        <Heading as="h1" textAlign="center" fontSize="8vh" marginY="4rem">
+        <Image src={Logo} h="15vh" marginTop="25vh" />
+        <Heading
+          as="h1"
+          textAlign="center"
+          fontSize={['2rem', '1.5em', '8vh']}
+          marginY="4rem"
+        >
           You should call me on my cell phone ... <br />
           Actually just an&nbsp;
           <Link

@@ -8,11 +8,15 @@ const Project = props => {
 
   return (
     <>
-      <ListItem key={data.id} marginTop="250px" h="100vh">
+      <ListItem
+        key={data.id}
+        marginTop={['50px', '50px', '250px']}
+        h={['50vh', '50vh', '100vh']}
+      >
         <Box
           bg="#f87d50"
           h="150px"
-          maxW="600px"
+          w={['200%', '100%', '600px']}
           p="20px"
           height="295px"
           data-sal="slide-up"
@@ -20,7 +24,7 @@ const Project = props => {
         >
           <Box h="100%" w="40px" float="left">
             <Text
-              fontSize="1.3rem"
+              fontSize={['1 rem', '1.1rem', '1.3rem']}
               color="#000"
               transform="rotate(-90deg)"
               textTransform="uppercase"
@@ -37,7 +41,7 @@ const Project = props => {
           </Box>
           <Box w="100%">
             <Text
-              fontSize="1.6rem"
+              fontSize={['1 rem', '1.4rem', '1.6rem']}
               textAlign="right"
               textTransform="uppercase"
               fontWeight="bolder"
@@ -47,8 +51,13 @@ const Project = props => {
             </Text>
           </Box>
         </Box>
-        <Box w="80%" mx="auto" marginTop="-227px">
-          <Flex spacing={3}>
+        <Box
+          w={['100%', '95%', '80%']}
+          mx="auto"
+          marginTop="-227px"
+          marginTop={['-200px', '-235px', '-227px']}
+        >
+          <Flex>
             {data.featuredImages.map(image => (
               <Flex
                 flex="1"
@@ -61,7 +70,7 @@ const Project = props => {
                   data-sal-easing="ease"
                   zIndex="2"
                   h="auto"
-                  w="90%"
+                  w={['100%', '100%', '90%']}
                   mx="auto"
                   //borderRadius="30px"
                   alt={image.file.fileName}
@@ -77,13 +86,13 @@ const Project = props => {
               data-sal="slide-up"
               data-sal-easing="ease"
               pos="relative"
-              w="25%"
+              w={['40%', '40%', '25%']}
               float="right"
               bg="#f87d50"
               color="#fff"
               zIndex="1"
               p="40px 20px 20px 20px"
-              marginTop="-30px"
+              marginTop={['-15px', '-15px', '-30px']}
               href={data.link}
               isExternal
               title={data.title}
