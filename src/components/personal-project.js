@@ -57,7 +57,7 @@ const PersonalProject = props => {
                 h="auto"
                 w="90%"
                 mx="auto"
-                borderRadius="30px"
+                //borderRadius="30px"
                 alt={data.projectImage.file.fileName}
                 src={data.projectImage.file.url}
               />

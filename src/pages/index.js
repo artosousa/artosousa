@@ -1,4 +1,5 @@
 import Brands from '../components/brands';
+import Footer from '../components/footer';
 import Hero from '../components/hero';
 import PersonalProjects from '../components/personal-projects';
 import Projects from '../components/projects';
@@ -87,6 +88,7 @@ export default function Index() {
         <Projects data={data.projects} />
         <Brands data={data.contentfulBrandList} />
         <PersonalProjects data={data.contentfulPersonalProjectsList} />
+        <Footer />
       </Box>
     </>
   );
