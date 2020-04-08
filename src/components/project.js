@@ -16,7 +16,7 @@ const Project = props => {
         <Box
           bg="#f87d50"
           h="150px"
-          w={['200%', '100%', '600px']}
+          w={['100%', '100%', '600px']}
           p="20px"
           height="295px"
           data-sal="slide-up"
@@ -24,7 +24,7 @@ const Project = props => {
         >
           <Box h="100%" w="40px" float="left">
             <Text
-              fontSize={['1 rem', '1.1rem', '1.3rem']}
+              fontSize={['1.1 rem', '1.1rem', '1.3rem']}
               color="#000"
               transform="rotate(-90deg)"
               textTransform="uppercase"
@@ -41,7 +41,7 @@ const Project = props => {
           </Box>
           <Box w="100%">
             <Text
-              fontSize={['1 rem', '1.4rem', '1.6rem']}
+              fontSize={['1.2rem', '1.4rem', '1.6rem']}
               textAlign="right"
               textTransform="uppercase"
               fontWeight="bolder"
@@ -52,17 +52,17 @@ const Project = props => {
           </Box>
         </Box>
         <Box
-          w={['100%', '95%', '80%']}
+          w={['95%', '95%', '80%']}
           mx="auto"
-          marginTop="-227px"
-          marginTop={['-200px', '-235px', '-227px']}
+          marginTop={['-240px', '-235px', '-227px']}
         >
           <Flex>
             {data.featuredImages.map(image => (
               <Flex
                 flex="1"
                 flexDir="column"
-                mx="0.5em"
+                h={['200px', '200px', 'auto']}
+                mx={['0.3em', '0.3em', '0.5em']}
                 key={image.file.fileName}
               >
                 <Image
@@ -86,7 +86,7 @@ const Project = props => {
               data-sal="slide-up"
               data-sal-easing="ease"
               pos="relative"
-              w={['40%', '40%', '25%']}
+              w={['50%', '50%', '25%']}
               float="right"
               bg="#f87d50"
               color="#fff"
