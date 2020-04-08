@@ -3,6 +3,7 @@ import Hero from '../components/hero';
 import Projects from '../components/projects';
 import React from 'react';
 import {Box} from '@chakra-ui/core';
+import {Helmet} from 'react-helmet';
 import {graphql, useStaticQuery} from 'gatsby';
 
 export default function Index() {
@@ -57,6 +58,11 @@ export default function Index() {
   );
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Arthur Sousa</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <Box bg="#f8f8f8" paddingBottom="150px">
         <Hero data={data.hero} />
         <Projects data={data.projects} />
