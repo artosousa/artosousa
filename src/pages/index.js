@@ -61,7 +61,10 @@ export default function Index() {
       <Helmet>
         <meta charSet="utf-8" />
         <title>Arthur Sousa</title>
-        <link rel="canonical" href="http://mysite.com/example" />
+        <meta
+          name="description"
+          content="Hey, I'm Arthur Sousa. Lead Web Designer at Digital Extremes, developers of Webby Award winning Free to Play @playwarframe."
+        />
       </Helmet>
       <Box bg="#f8f8f8" paddingBottom="150px">
         <Hero data={data.hero} />

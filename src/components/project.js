@@ -8,7 +8,7 @@ const Project = props => {
 
   return (
     <>
-      <ListItem key={data.id} marginY="250px" h="100vh">
+      <ListItem key={data.id} marginTop="250px" h="100vh">
         <Box
           bg="#f87d50"
           h="150px"
