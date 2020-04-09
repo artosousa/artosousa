@@ -13,7 +13,7 @@ const Project = props => {
         marginTop={['50px', '50px', '250px']}
         marginBottom={['50px', '150px', '0px']}
         paddingBottom={['68px', '0', '0']}
-        minHeight={['200px', 'auto', '100vh']}
+        minHeight={['auto', 'auto', '100vh']}
       >
         <Box
           bg="#f87d50"
