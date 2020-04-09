@@ -1,8 +1,13 @@
-import Logo from '../assets/salmonLogo.png';
-import React from 'react';
+import React, {useState} from 'react';
 import {Flex, Heading, Image, Link} from '@chakra-ui/core';
 
+const logo = require('../assets/salmonLogo.png');
+const dance = require('../assets/cellPhoneDance.png');
+const logos = {logo, dance};
+
 const Footer = () => {
+  const [selected, setSelected] = useState(logos.logo);
+
   return (
     <>
       <Flex
@@ -16,7 +21,14 @@ const Footer = () => {
         color="#f87d50"
         my="auto"
       >
-        <Image src={Logo} h="15vh" marginTop="25vh" />
+        <Image
+          src={selected}
+          alt="logo"
+          onClick={() => setSelected(logos.dance)}
+          h="15vh"
+          marginTop="25vh"
+          cursor="pointer"
+        />
         <Heading
           as="h1"
           textAlign="center"
