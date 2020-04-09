@@ -113,7 +113,7 @@ const Project = props => {
                 '44px 20px 20px 20px',
                 '44px 20px 20px 20px'
               ]}
-              marginTop={['-25px', '-25px', '-30px']}
+              marginTop={['-15px', '-15px', '-30px', '-30px']}
               isExternal
               title={data.title}
               fontSize={['1em', '1em', '1.2em']}
