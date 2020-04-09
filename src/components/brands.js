@@ -8,7 +8,6 @@ const Brands = props => {
     <>
       <Box
         w="90%"
-        minW="420px"
         mx="auto"
         pos="relative"
         zIndex="2"
