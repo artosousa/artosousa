@@ -70,7 +70,7 @@ const Project = props => {
               <Flex
                 flex="1"
                 flexDir="column"
-                h={['200px', '200px', 'auto']}
+                h="auto"
                 mx={['0', '0', '0.5em']}
                 marginBottom={['16px', '16px', '0px']}
                 key={image.file.fileName}
