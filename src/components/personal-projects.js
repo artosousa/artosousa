@@ -7,7 +7,12 @@ const PersonalProjects = props => {
   const {data} = props;
   return (
     <>
-      <Box mx="auto" marginTop="100px" color="#f87d50" w="90%">
+      <Box
+        mx="auto"
+        marginTop={['124px', '124px', '0px', '284px']}
+        color="#f87d50"
+        w="90%"
+      >
         <Heading
           w={('90%', '90%', '100%')}
           as="h1"

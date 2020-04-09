@@ -11,7 +11,7 @@ const Brands = props => {
         mx="auto"
         pos="relative"
         zIndex="2"
-        marginTop={['124px', '124px', '0']}
+        marginTop={['124px', '124px', '0px', '224px']}
       >
         <Heading
           as="h1"
