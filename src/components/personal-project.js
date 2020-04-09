@@ -5,7 +5,6 @@ import {Box, Flex, Image, Link, ListItem, Text} from '@chakra-ui/core';
 
 const PersonalProject = props => {
   const {data} = props;
-  console.log(data);
   return (
     <>
       <ListItem

@@ -5,7 +5,6 @@ import {Box, Heading, List} from '@chakra-ui/core';
 
 const PersonalProjects = props => {
   const {data} = props;
-  console.log(data);
   return (
     <>
       <Box mx="auto" marginTop="100px" color="#f87d50" w="90%">
