@@ -61,7 +61,7 @@ const PersonalProject = props => {
                 data-sal-easing="ease"
                 zIndex="2"
                 h="auto"
-                w="100%"
+                w={['100%', '100%', '80%']}
                 marginLeft={['53px', '53px', 'auto']}
                 marginRight="auto"
                 alt={data.projectImage.file.fileName}
