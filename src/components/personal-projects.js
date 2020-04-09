@@ -8,11 +8,21 @@ const PersonalProjects = props => {
   console.log(data);
   return (
     <>
-      <Box maxW="70%" mx="auto" marginTop="100px" color="#f87d50">
-        <Heading as="h1" marginBottom="25px">
+      <Box mx="auto" marginTop="100px" color="#f87d50" w="90%">
+        <Heading
+          w={('90%', '90%', '100%')}
+          as="h1"
+          textAlign={['center', 'center', 'left']}
+          fontSize={['2rem', '2rem', '4rem']}
+          marginBottom="25px"
+          mx="auto"
+        >
           {data.title}
         </Heading>
-        <List display="flex">
+        <List
+          display="flex"
+          flexDirection={['column', 'column', 'column', 'row']}
+        >
           {data.projects.map((project, index) => {
             return <PersonalProject key={index} data={project} />;
           })}

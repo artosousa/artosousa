@@ -9,9 +9,10 @@ const Footer = () => {
         align="center"
         justify="center"
         direction="column"
-        h="100vh"
+        h={['50vh', '50vh', '100vh']}
         bgPos="center"
         bgRepeat="no-repeat"
+        marginTop={['-150px', '-150px', '0px']}
         color="#f87d50"
         my="auto"
       >

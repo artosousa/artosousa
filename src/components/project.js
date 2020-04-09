@@ -11,7 +11,9 @@ const Project = props => {
       <ListItem
         key={data.id}
         marginTop={['50px', '50px', '250px']}
-        h={['50vh', '50vh', '100vh']}
+        marginBottom={['50px', '150px', '0px']}
+        paddingBottom={['68px', '0', '0']}
+        minHeight={['200px', 'auto', '100vh']}
       >
         <Box
           bg="#f87d50"
@@ -22,7 +24,13 @@ const Project = props => {
           data-sal="slide-up"
           data-sal-easing="ease"
         >
-          <Box h="100%" w="40px" float="left">
+          <Box
+            h="100%"
+            w="40px"
+            float="left"
+            position="relative"
+            left={['-10px', '-10px', '0px', '0x']}
+          >
             <Text
               fontSize={['1.1 rem', '1.1rem', '1.3rem']}
               color="#000"
@@ -56,13 +64,14 @@ const Project = props => {
           mx="auto"
           marginTop={['-240px', '-235px', '-227px']}
         >
-          <Flex>
+          <Flex flexDir={['column', 'column', 'row', 'row']}>
             {data.featuredImages.map(image => (
               <Flex
                 flex="1"
                 flexDir="column"
                 h={['200px', '200px', 'auto']}
-                mx={['0.3em', '0.3em', '0.5em']}
+                mx={['0', '0', '0.5em']}
+                marginBottom={['16px', '16px', '0px']}
                 key={image.file.fileName}
               >
                 <Image
@@ -70,9 +79,8 @@ const Project = props => {
                   data-sal-easing="ease"
                   zIndex="2"
                   h="auto"
-                  w={['100%', '100%', '90%']}
+                  w="100%"
                   mx="auto"
-                  //borderRadius="30px"
                   alt={image.file.fileName}
                   src={image.file.url}
                 />
@@ -86,13 +94,17 @@ const Project = props => {
               data-sal="slide-up"
               data-sal-easing="ease"
               pos="relative"
-              w={['50%', '50%', '25%']}
+              w={['75%', '75%', '25%']}
               float="right"
               bg="#f87d50"
               color="#fff"
               zIndex="1"
-              p="40px 20px 20px 20px"
-              marginTop={['-15px', '-15px', '-30px']}
+              p={[
+                '40px 20px 20px 20px',
+                '40px 20px 20px 20px',
+                '40px 20px 20px 20px'
+              ]}
+              marginTop={['-25px', '-25px', '-30px']}
               href={data.link}
               isExternal
               title={data.title}
@@ -103,7 +115,7 @@ const Project = props => {
                 float="right"
                 pos="relative"
                 marginRight="8px"
-                marginTop="-15px"
+                marginTop={['-5px', '-5px', '-15px']}
                 w="32px"
               />
             </Link>

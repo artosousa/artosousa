@@ -8,10 +8,16 @@ const PersonalProject = props => {
   console.log(data);
   return (
     <>
-      <ListItem key={data.id} display="flex" flex="1" flexDir="column">
+      <ListItem
+        key={data.id}
+        display="flex"
+        flexDir="column"
+        w="100%"
+        marginBottom={['64px', '164px', '164px', '0px']}
+      >
         <Box
           bg="#f87d50"
-          w="65%"
+          w={['90%', '100%', '65%']}
           h="150px"
           p="20px"
           height="295px"
@@ -55,9 +61,9 @@ const PersonalProject = props => {
                 data-sal-easing="ease"
                 zIndex="2"
                 h="auto"
-                w="90%"
-                mx="auto"
-                //borderRadius="30px"
+                w="100%"
+                marginLeft={['53px', '53px', 'auto']}
+                marginRight="auto"
                 alt={data.projectImage.file.fileName}
                 src={data.projectImage.file.url}
               />
@@ -70,14 +76,14 @@ const PersonalProject = props => {
               data-sal="slide-up"
               data-sal-easing="ease"
               pos="relative"
-              w="35%"
+              w={['65%', '65%', '55%', '45%']}
               float="right"
               bg="#f87d50"
               color="#fff"
               zIndex="1"
               p="40px 20px 20px 20px"
-              marginTop="-30px"
-              marginRight="30px"
+              marginTop={['-15px', '-15px', '-30px', '-30px']}
+              marginRight={['0px', '0px', '30px']}
               href={data.projectLink}
               isExternal
               title={data.projectTitle}

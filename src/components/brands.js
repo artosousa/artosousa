@@ -6,11 +6,21 @@ const Brands = props => {
   const {data} = props;
   return (
     <>
-      <Box w="90%" minW="420px" mx="auto" pos="relative" zIndex="2">
+      <Box
+        w="90%"
+        minW="420px"
+        mx="auto"
+        pos="relative"
+        zIndex="2"
+        marginTop={['124px', '124px', '0']}
+      >
         <Heading
           as="h1"
+          textAlign={['center', 'center', 'left']}
           color="#f87d50"
-          my="24px"
+          fontSize={['2.2rem', '2.2rem', '4rem']}
+          padding={['16px', '16px', '0px']}
+          my={['10px', '10px', '24px']}
           data-sal="slide-up"
           data-sal-easing="ease"
         >
@@ -20,17 +30,15 @@ const Brands = props => {
           zIndex="2"
           alignItems="center"
           justifyContent="center"
-          w="100%"
+          mx="auto"
+          w={['90%', '90%', '100%']}
           backgroundColor="white"
-          data-sal="slide-up"
-          data-sal-easing="ease"
-          data-sal-delay="50"
+          flexDir={['column', 'column', 'row']}
         >
           {data.brands.map(brand => (
             <Flex
               key={brand.id}
               flex="1"
-              flexDir="row"
               flexWrap="wrap"
               alignContent="center"
               p="5"
