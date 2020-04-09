@@ -1,11 +1,10 @@
 import React, {useState} from 'react';
+import dance from '../assets/cellPhoneDance.png';
+import logo from '../assets/salmonLogo.png';
 import {Flex, Heading, Image, Link} from '@chakra-ui/core';
-const logo = require('../assets/salmonLogo.png');
-const dance = require('../assets/cellPhoneDance.png');
-const logos = {logo, dance};
 
 const Footer = () => {
-  const [selected, setSelected] = useState(logos.logo);
+  const [toggled, setToggled] = useState(false);
 
   return (
     <>
@@ -21,9 +20,9 @@ const Footer = () => {
         my="auto"
       >
         <Image
-          src={selected}
+          src={toggled ? dance : logo}
           alt="logo"
-          onClick={() => setSelected(logos.dance)}
+          onClick={() => setToggled(prevToggled => !prevToggled)}
           h="15vh"
           marginTop="25vh"
         />
