@@ -56,35 +56,42 @@ const PersonalProject = props => {
         <Box w="80%" mx="auto" marginTop="-227px">
           <Flex>
             <Flex flex="1" flexDir="column" mx="0.5em">
-              <Image
-                data-sal="slide-up"
-                data-sal-easing="ease"
-                zIndex="2"
-                h="auto"
-                w={['100%', '100%', '80%']}
-                marginLeft={['53px', '53px', 'auto']}
-                marginRight="auto"
-                alt={data.projectImage.file.fileName}
-                src={data.projectImage.file.url}
-              />
+              <Link
+                href={data.projectLink}
+                isExternal
+                title={data.projectTitle}
+                zIndex="22"
+              >
+                <Image
+                  data-sal="slide-up"
+                  data-sal-easing="ease"
+                  zIndex="2"
+                  h="auto"
+                  w={['100%', '100%', '80%']}
+                  marginLeft={['53px', '53px', 'auto']}
+                  marginRight="auto"
+                  alt={data.projectImage.file.fileName}
+                  src={data.projectImage.file.url}
+                />
+              </Link>
             </Flex>
           </Flex>
         </Box>
         <Box>
           <Text>
             <Link
+              href={data.projectLink}
               data-sal="slide-up"
               data-sal-easing="ease"
               pos="relative"
               w={['65%', '65%', '55%', '45%']}
               float="right"
-              bg="#f87d50"
+              bg="#6F4541"
               color="#fff"
               zIndex="1"
               p="40px 20px 20px 20px"
               marginTop={['-15px', '-15px', '-30px', '-30px']}
               marginRight={['0px', '0px', '30px']}
-              href={data.projectLink}
               isExternal
               title={data.projectTitle}
             >

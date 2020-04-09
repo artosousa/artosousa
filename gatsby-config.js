@@ -6,7 +6,12 @@ module.exports = {
   plugins: [
     'gatsby-plugin-favicon',
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-scroll-reveal',
+    {
+      resolve: 'gatsby-plugin-scroll-reveal',
+      options: {
+        threshold: 0.2 // Percentage of an element's area that needs to be visible to launch animation
+      }
+    },
     {
       resolve: 'gatsby-plugin-scroll-indicator',
       options: {

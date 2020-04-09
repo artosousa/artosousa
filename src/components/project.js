@@ -33,7 +33,8 @@ const Project = props => {
           >
             <Text
               fontSize={['1.1 rem', '1.1rem', '1.3rem']}
-              color="#000"
+              color="#6F4541"
+              fontWeight="500"
               transform="rotate(-90deg)"
               textTransform="uppercase"
               transformOrigin="right bottom 0"
@@ -74,16 +75,23 @@ const Project = props => {
                 marginBottom={['16px', '16px', '0px']}
                 key={image.file.fileName}
               >
-                <Image
-                  data-sal="slide-up"
-                  data-sal-easing="ease"
-                  zIndex="2"
-                  h="auto"
-                  w="100%"
-                  mx="auto"
-                  alt={image.file.fileName}
-                  src={image.file.url}
-                />
+                <Link
+                  href={data.projectLink}
+                  isExternal
+                  title={data.projectTitle}
+                  zIndex="22"
+                >
+                  <Image
+                    data-sal="slide-up"
+                    data-sal-easing="ease"
+                    zIndex="2"
+                    h="auto"
+                    w="100%"
+                    mx="auto"
+                    alt={image.file.fileName}
+                    src={image.file.url}
+                  />
+                </Link>
               </Flex>
             ))}
           </Flex>
@@ -91,23 +99,24 @@ const Project = props => {
         <Box>
           <Text>
             <Link
+              href={data.link}
               data-sal="slide-up"
               data-sal-easing="ease"
               pos="relative"
               w={['75%', '75%', '25%']}
               float="right"
-              bg="#f87d50"
+              bg="#6F4541"
               color="#fff"
               zIndex="1"
               p={[
-                '40px 20px 20px 20px',
-                '40px 20px 20px 20px',
-                '40px 20px 20px 20px'
+                '44px 20px 20px 20px',
+                '44px 20px 20px 20px',
+                '44px 20px 20px 20px'
               ]}
               marginTop={['-25px', '-25px', '-30px']}
-              href={data.link}
               isExternal
               title={data.title}
+              fontSize={['1em', '1em', '1.2em']}
             >
               View Project
               <Image
