@@ -42,7 +42,7 @@ const PersonalProject = props => {
           </Box>
           <Box w="100%">
             <Text
-              fontSize="1.6rem"
+              fontSize={['1.2rem', '1.2rem', '1.6rem']}
               textAlign="right"
               textTransform="uppercase"
               fontWeight="bolder"
