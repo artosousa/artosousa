@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import {Flex, Heading, Image, Link} from '@chakra-ui/core';
-
 const logo = require('../assets/salmonLogo.png');
 const dance = require('../assets/cellPhoneDance.png');
 const logos = {logo, dance};
@@ -27,7 +26,6 @@ const Footer = () => {
           onClick={() => setSelected(logos.dance)}
           h="15vh"
           marginTop="25vh"
-          cursor="pointer"
         />
         <Heading
           as="h1"
