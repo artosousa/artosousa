@@ -32,7 +32,7 @@ const Footer = () => {
           >
             email
           </Link>
-          &nbsp;will do the job.
+          &nbsp;will do.
         </Heading>
       </Flex>
     </>
