@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import linkImg from '../assets/linkImg.png';
 import {Box, Flex, Image, Link, ListItem, Text} from '@chakra-ui/core';
+import {trackCustomEvent} from 'gatsby-plugin-google-analytics';
 
 const PersonalProject = props => {
   const {data} = props;

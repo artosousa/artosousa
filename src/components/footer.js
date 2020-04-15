@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import dance from '../assets/cellPhoneDance.png';
 import logo from '../assets/salmonLogo.png';
 import {Flex, Heading, Image, Link} from '@chakra-ui/core';
+import {trackCustomEvent} from 'gatsby-plugin-google-analytics';
 
 const Footer = () => {
   const [toggled, setToggled] = useState(false);
@@ -25,9 +26,9 @@ const Footer = () => {
           onClick={() => {
             trackCustomEvent(
               {
-                category: 'personal project',
-                action: 'project image click',
-                label: data.title
+                category: 'easter egg',
+                action: 'lock click',
+                label: 'Go Dancing'
               },
               setToggled(prevToggled => !prevToggled)
             );
