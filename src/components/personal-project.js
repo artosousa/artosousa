@@ -60,6 +60,13 @@ const PersonalProject = props => {
                 isExternal
                 title={data.projectTitle}
                 zIndex="22"
+                onClick={() => {
+                  trackCustomEvent({
+                    category: 'personal project',
+                    action: 'project image click',
+                    label: data.title
+                  });
+                }}
               >
                 <Image
                   data-sal="slide-up"
@@ -93,6 +100,13 @@ const PersonalProject = props => {
               marginRight={['0px', '0px', '30px']}
               isExternal
               title={data.projectTitle}
+              onClick={() => {
+                trackCustomEvent({
+                  category: 'personal project',
+                  action: 'text link click',
+                  label: data.title
+                });
+              }}
             >
               Live Project
               <Image

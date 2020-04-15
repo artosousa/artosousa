@@ -12,14 +12,7 @@ module.exports = {
         // The property ID; the tracking code won't be generated without it
         trackingId: 'UA-22488938-1',
         // Defines where to place the tracking script - `true` in the head and `false` in the body
-        head: false,
-        // Avoids sending pageview hits from custom paths
-        exclude: ['/preview/**', '/do-not-track/me/too/'],
-        // Delays sending pageview hits on route update (in milliseconds)
-        pageTransitionDelay: 0,
-        // Any additional optional fields
-
-        cookieDomain: 'arthursousa.com'
+        head: false
       }
     },
     {

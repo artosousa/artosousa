@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import linkImg from '../assets/linkImg.png';
 import {Box, Flex, Image, Link, ListItem, Text} from '@chakra-ui/core';
+import {trackCustomEvent} from 'gatsby-plugin-google-analytics';
 
 const Project = props => {
   const {data} = props;
@@ -76,10 +77,17 @@ const Project = props => {
                 key={image.file.fileName}
               >
                 <Link
-                  href={data.projectLink}
+                  href={data.link}
                   isExternal
                   title={data.projectTitle}
                   zIndex="22"
+                  onClick={() => {
+                    trackCustomEvent({
+                      category: 'portfolio item',
+                      action: 'project image click',
+                      label: data.title
+                    });
+                  }}
                 >
                   <Image
                     data-sal="slide-up"
@@ -117,6 +125,13 @@ const Project = props => {
               isExternal
               title={data.title}
               fontSize={['1em', '1em', '1.2em']}
+              onClick={() => {
+                trackCustomEvent({
+                  category: 'portfolio item',
+                  action: 'text link click',
+                  label: data.title
+                });
+              }}
             >
               View Project
               <Image

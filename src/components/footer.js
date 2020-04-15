@@ -22,7 +22,16 @@ const Footer = () => {
         <Image
           src={toggled ? dance : logo}
           alt="logo"
-          onClick={() => setToggled(prevToggled => !prevToggled)}
+          onClick={() => {
+            trackCustomEvent(
+              {
+                category: 'personal project',
+                action: 'project image click',
+                label: data.title
+              },
+              setToggled(prevToggled => !prevToggled)
+            );
+          }}
           h="15vh"
           marginTop="25vh"
         />
