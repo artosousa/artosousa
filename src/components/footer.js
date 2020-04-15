@@ -27,7 +27,7 @@ const Footer = () => {
             trackCustomEvent(
               {
                 category: 'easter egg',
-                action: 'lock click',
+                action: 'logo click',
                 label: 'Go Dancing'
               },
               setToggled(prevToggled => !prevToggled)
