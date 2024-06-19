@@ -1,0 +1,30 @@
+---
+import { type Asset,  type EntryFieldTypes } from 'contentful';
+
+interface ProjectFields {
+    fields: any,
+    title: EntryFieldTypes.Text;
+    projectUrl: EntryFieldTypes.Text;
+    projectLogo: Asset;
+}
+const { title, projects } = Astro.props as { title: string; projects: ProjectFields[] };
+---
+
+<section id="circle" class="px-8 w-full h-full    lg:px-0  py-[163px] relative  flex flex-col items-center justify-center">
+    <h1 class="uppercase mb-[85px] font-bold text-[42px]">{title}</h1>
+    <ul class=" w-full max-w-[1440px] grid-cols-1 gap-12 grid place-items-center lg:grid-cols-5 lg:gap-28">
+        {projects.map((project) => {
+            console.log(project.fields.url)
+            return (
+                <li class="items-center justify-center">
+                    <a class="" href={project.fields.url} target="_blank" title={project.fields.title} >
+                        <img class="h-[75px] " src={project.fields.logo.fields.file.url} width="200" height="200" />
+                    </a>
+                </li>
+                
+            )
+        })}
+    </ul>
+ 
+</section>
+ 
