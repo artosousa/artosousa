@@ -9,7 +9,7 @@ const {title, copy, logo} = Astro.props
     <div id="bg" class="absolute left-0 top-0  -z-[1]">
         <Image class="object-cover w-screen h-screen" src={heroImage} alt="Hollywood Hills" />
     </div>
-    <Image class="mb-[87px]" src={logo} width="201" height="175" alt="logo" title="Arthur Sousa" />
+    <Image class="mb-[40px] lg:mb-[87px] w-[60px] lg:w-[201px] h-auto" src={logo} width="201" height="175" alt="logo" title="Arthur Sousa" />
     <h1 class="mb-[38px] text-[28px] lg:text-[42px]">{title}</h1>
     <p class="w-full max-w-[925px] text-center text-[19px] leading-[35px]">{copy}</p>
 </section>

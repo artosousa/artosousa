@@ -15,7 +15,6 @@ const { services } = Astro.props as { services: ServiceFields[] };
    
     <ul class=" w-full max-w-[1440px] grid-cols-1 gap-12 grid place-items-center lg:grid-cols-3 lg:gap-20">
         {services.map((service) => {
-            console.log(service)
             return (
                 <li class="items-center justify-center flex flex-col text-center">
                    <img src={service.fields.icon.fields.file.url} title={service.fields.title} alt={`${service.fields.title} icon`} />
