@@ -5,6 +5,7 @@ import Cta from '../components/Cta.astro'
 import Featured from '../components/Featured.astro'
 import Circle from '../components/Circle.astro'
 import Services from '../components/Services.astro'
+import Footer from '../components/Footer.astro'
 import { contentfulClient } from "../lib/contentful"
 import { type Asset, type EntryFieldTypes } from 'contentful'
 
@@ -59,7 +60,8 @@ interface HomePage {
 	circleProjects: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<circleSkeleton>>,
 	services: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<servicesSkeleton>>,
 	footerTitle: EntryFieldTypes.Text,
-	footerCopy: EntryFieldTypes.Text
+	footerCopy: EntryFieldTypes.Text,
+	footerBG: Asset
   }
 }
 
@@ -78,5 +80,6 @@ const data = layout.items[0].fields
 		<Featured title={data.featuredTitle} projects={data.featuredProjects} />
 		<Circle title={data.circleTitle} projects={data.circleProjects} />
 		<Services services={data.services} />
+		<Footer title={data.footerTitle} copy={data.footerCopy}  />
 	</main>
 </Layout>
