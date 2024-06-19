@@ -2,13 +2,15 @@
 import { Image } from 'astro:assets';
 import Logo from './Logo.astro'
 import heroImage from '../assets/HeaderBG.jpg'
+
+const {title, copy, logo} = Astro.props
 ---
 
-<section  id="hero" class="!text-white text-center flex flex-col w-screen h-screen items-center justify-center w-full">
+<section  id="hero" class="px-8 lg:px-0  !text-white text-center flex flex-col h-screen items-center justify-center w-full">
     <div id="bg" class="absolute left-0 top-0  -z-[1]">
         <Image class="object-cover w-screen h-screen" src={heroImage} alt="Hollywood Hills" />
     </div>
-    <Logo />
-    <h1 class="mb-[38px] text-[42px]"><strong>ARTHUR</strong> CREATES ONLINE EXPERIENCES.</h1>
-    <p class="w-full max-w-[925px] text-center text-[19px] leading-[35px]">We are experts in building incredible websites specializing in Shopify stores, offering custom  design and development to perfectly match your brand's unique style while ensuring that every website not only looks amazing but also functions seamlessly, providing a smooth  experience for your customers and making it simple for you to manage and grow your  business.</p>
+    <Image class="mb-[87px]" src={logo} width="201" height="175" alt="logo" title="Arthur Sousa" />
+    <h1 class="mb-[38px] text-[42px]">{title}</h1>
+    <p class="w-full max-w-[925px] text-center text-[19px] leading-[35px]">{copy}</p>
 </section>

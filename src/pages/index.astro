@@ -2,11 +2,69 @@
 import Layout from '../layouts/Layout.astro'
 import Hero from '../components/Hero.astro'
 import Cta from '../components/Cta.astro'
+import Featured from '../components/Featured.astro'
+import { contentfulClient } from "../lib/contentful"
+import { type Asset, type Entry, type EntryFieldTypes } from 'contentful'
+
+interface navSkeleton{
+	contentTypeId: "navigation",
+	fields: {
+		navItemText: EntryFieldTypes.Text,
+		navItemUrl: EntryFieldTypes.Text
+	}
+}
+
+interface featuredSkeleton{
+	contentTypeId: "featuredProduct",
+	fields: {
+		title: EntryFieldTypes.Text,
+		projectUrl: EntryFieldTypes.Text,
+		projectImage: Asset,
+		projectLogo: Asset
+	}
+}
+
+interface circleSkeleton{
+	contentTypeId: "featuredProduct",
+	fields: {
+		title: EntryFieldTypes.Text,
+		url: EntryFieldTypes.Text,
+		logo: Asset
+	}
+}
+
+interface HomePage {
+  contentTypeId: "homePageLayout",
+  fields: {
+	nav: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<navSkeleton>>,
+    logo: Asset,
+	headerTitle: EntryFieldTypes.Text,
+	headerCopy: EntryFieldTypes.Text,
+	ctaTitle: EntryFieldTypes.Text,
+	ctaCopy: EntryFieldTypes.Text,
+	ctaButtonText: EntryFieldTypes.Text,
+	ctaButtonLink: EntryFieldTypes.Text,
+	featuredTitle: EntryFieldTypes.Text,
+	featuredProjects: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<featuredSkeleton>>,
+	circleTitle: EntryFieldTypes.Text,
+	circleProjects: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<circleSkeleton>>,
+	footerTitle: EntryFieldTypes.Text,
+	footerCopy: EntryFieldTypes.Text
+  }
+}
+
+const layout = await contentfulClient.getEntries<HomePage>({
+  content_type: "homePageLayout",
+})
+
+const data = layout.items[0].fields
+
 ---
 
 <Layout title="Arthur - Web Experts">
 	<main>
-		<Hero />
-		<Cta />
+		<Hero title={data?.headerTitle} copy={data.headerCopy} logo={(data.logo as Asset).fields?.file?.url}/>
+		<Cta title={data.ctaTitle} copy={data.ctaCopy} button={data.ctaButtonText} link={data.ctaButtonLink} />
+		<Featured title={data.featuredTitle} projects={data.featuredProjects} />
 	</main>
 </Layout>

@@ -1,15 +1,17 @@
 ---
 import { Image } from 'astro:assets';
 import bgImage from '../assets/topography_CTA.png'
+
+const {title, copy, button, link} = Astro.props
 ---
-<section id="cta" class="py-[98px] relative flex flex-col items-center justify-center over border-b-8 border-[#007B96]">
+<section id="cta" class="px-8 lg:px-0  py-[98px] h-full min-h-[560px] relative flex flex-col items-center justify-center over border-b-8 border-[#007B96]">
     <div id="bg" class="h-full absolute left-0 top-0  -z-[1] opacity-[0.05]">
-        <Image class="object-cover h-full " src={bgImage} alt="topography BG Image" />
+        <Image class="object-cover h-full w-full " src={bgImage} alt="topography BG Image" />
     </div>
-    <h1 class="mb-[38px] font-bold text-[42px] text-[#007B96]">LET’S BUILD SOMETHING INCREDIBLE.</h1>
-    <p class="w-full max-w-[925px] text-center text-[19px] leading-[35px]">We are experts in building incredible websites specializing in Shopify stores, offering custom  design and development to perfectly match your brand's unique style while ensuring that every website not only looks amazing but also functions seamlessly, providing a smooth  experience for your customers and making it simple for you to manage and grow your  business.</p>
-    <a class="button mt-[26px] rounded-[30px] gap-4 cursor-pointer items-center justify-center py-[18px] px-[48px] flex flex-row bg-[#007B96] text-white ">
-        LET'S TALK
+    <h1 class="uppercase text-center mb-[38px] font-bold text-[42px] text-[#007B96]">{title}</h1>
+    <p class="w-full max-w-[925px] text-center text-[19px] leading-[35px]">{copy}</p>
+    <a href={link} class="uppercase button mt-[26px] rounded-[30px] gap-4 cursor-pointer items-center justify-center py-[18px] px-[48px] flex flex-row bg-[#007B96] text-white ">
+        {button}
         <svg width="42" height="11" viewBox="0 0 42 11" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M35.3292 3.42317H0.585938C0.262354 3.42317 0 3.68552 0 4.0091V6.74348C0 7.06706 0.262354 7.32942 0.585938 7.32942H35.3292V9.57839C35.3292 10.6224 36.5914 11.1453 37.3297 10.4071L41.5318 6.20495C41.9895 5.74729 41.9895 5.00529 41.5318 4.54768L37.3297 0.345578C36.5915 -0.392655 35.3292 0.130197 35.3292 1.17424V3.42317Z" fill="white"/>
         </svg>
