@@ -10,7 +10,7 @@ interface ProjectFields {
     projectImage: Asset,
     projectLogo: Asset
 }
-const { title, projects } = Astro.props as { title: string; projects: ProjectFields[] }
+const { title, projects, copy } = Astro.props as { title: string; copy: string; projects: ProjectFields[] }
 const splitString = title.split(' ')
 const name = splitString[0][0] + splitString[0].slice(1)
 const newTitle = splitString.slice(1).map(word => word[0] + word.slice(1)).join(' ')
