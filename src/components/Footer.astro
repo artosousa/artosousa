@@ -5,25 +5,25 @@ const {title, copy, background } = Astro.props
 ---
 
 <section  id="contact" class="relative py-[146px] bg-[#007B96] px-8 lg:px-0  !text-white text-center flex flex-col items-center justify-center w-full">
-    <div id="bg" class="h-full absolute left-0 top-0 opacity-[0.05]">
+    <div id="bg" class="z-1 h-full absolute left-0 top-0 opacity-[0.05]">
         <Image class="object-cover h-full w-full " src={bgImage} alt="topography BG Image" />
     </div>
-    <div class="container inline-flex flex-col lg:flex-row gap-x-12 gap-y-24">
+    <div class="container z-[3] inline-flex flex-col lg:flex-row gap-x-12 gap-y-24">
        <div class="text-left w-full lg:w-1/2">
              <h1 class="mb-[38px] font-bold text-[28px] lg:text-[42px]">{title}</h1>
             <p class="w-full max-w-[925px]  text-[16px] lg:text-[19px] leading-[32px]  lg:leading-[35px]">{copy}</p>
        </div>
        <div class="text-left w-full lg:w-1/2">
-            <form name="contact" data-netlify="true">
-                <p>
-                    <label>Name <input type="text" name="name" /></label>
-                </p>
-                <p>
-                    <label>Email <input type="email" name="email" /></label>
-                </p>
-                <p>
+            <form name="contact" data-netlify="true" class="inline-flex flex-wrap gap-8">
+                
+                    <input class="w-[45%] px-2 pt-4 bg-transparent border-b-white border-solid border-b-2" type="text" name="name" placeholder="Name"/>
+                    <input class="w-[45%] px-2 pt-4 bg-transparent border-b-white border-solid border-b-2" name="email" placeholder="Email" />
+                    <input class="w-[45%] px-2 pt-4 bg-transparent border-b-white border-solid border-b-2" name="company" placeholder="Company Name"/>
+                    <input class="w-[45%] px-2 pt-4 bg-transparent border-b-white border-solid border-b-2" name="size" placeholder="Company Size" />
+                    <input class="w-[94.5%] px-2 pt-4 bg-transparent border-b-white border-solid border-b-2" name="message" placeholder="Your Message"/ >
+                
                     <button type="submit">Send</button>
-                </p>
+               
             </form>
        </div>
     </div>
