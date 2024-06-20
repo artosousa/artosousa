@@ -4,14 +4,36 @@ interface Props {
 }
 
 const { title } = Astro.props;
+const shareImg = "https://i.imgur.com/Lc7IZe3.png"
+const shareDesc = "Arthur is an expert in building incredible websites! With over 15 years of experience both as a Designer and Developer. Arthur specializes in Shopify stores, offering custom design and development to perfectly match your brand's unique style while ensuring that every website not only looks amazing but also functions seamlessly, providing a smooth experience for your customers and making it simple for you to manage and grow your business.Your Open Graph Description"
+const shareTitle = "Arthur Sousa - Web Experts"
+
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="description" content="A brief description of the page content.">
+		<meta name="keywords" content="Shopify, Web Design, Web Developer, Toronto, Hamilton, California, Canada">
+		<meta name="author" content="Arthur Sousa">
+		<meta name="robots" content="index, follow">
+		<meta name="revisit-after" content="7 days">
+
+		<meta property="og:title" content={shareTitle}>
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="http://www.arthursousa.com">
+		<meta property="og:image" content={shareImg}>
+		<meta property="og:description" content={shareDesc}>
+		<meta property="og:site_name" content={shareTitle}>
+		<meta property="og:locale" content="en_US">
+
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@artosousa">
+		<meta name="twitter:title" content={shareTitle}>
+		<meta name="twitter:description" content={shareDesc}>
+		<meta name="twitter:image" content={shareImg}>
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="stylesheet" href="https://use.typekit.net/vmp2dwa.css">
