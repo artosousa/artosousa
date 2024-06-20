@@ -5,11 +5,13 @@ import heroImage from '../assets/HeaderBG.jpg'
 const {title, copy, logo} = Astro.props
 ---
 
-<section  id="hero" class="px-8 lg:px-0  !text-white text-center flex flex-col h-screen items-center justify-center w-full">
-    <div id="bg" class="absolute left-0 top-0  -z-[1]">
+<section  id="hero" class="px-8 lg:px-0  !text-white text-center bg-[#006075] flex flex-col h-screen items-center justify-center w-full">
+    <div id="bg" class="absolute left-0 top-0 opacity-90  z-[1]">
         <Image class="object-cover w-screen h-screen" src={heroImage} alt="Hollywood Hills" />
     </div>
-    <Image class="mb-[40px] lg:mb-[87px] w-[60px] lg:w-[201px] h-auto" src={logo} width="201" height="175" alt="logo" title="Arthur Sousa" />
-    <h1 class="mb-[38px] text-[28px] lg:text-[42px]">{title}</h1>
-    <p class="w-full max-w-[925px] text-center text-[16px] lg:text-[19px] leading-[32px]  lg:leading-[35px]">{copy}</p>
+    <div class="z-[3] flex flex-col justify-center items-center">
+        <Image class="mb-[40px] lg:mb-[87px] w-[60px] lg:w-[201px] h-auto" src={logo} width="201" height="175" alt="logo" title="Arthur Sousa" />
+        <h1 class="mb-[38px] text-[28px] lg:text-[42px]">{title}</h1>
+        <p class="w-full max-w-[925px] text-center text-[16px] lg:text-[19px] leading-[32px]  lg:leading-[35px]">{copy}</p>
+    </div>
 </section>

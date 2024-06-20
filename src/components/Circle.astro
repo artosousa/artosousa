@@ -13,14 +13,14 @@ const name = splitString[0][0] + splitString[0].slice(1)
 const newTitle = splitString.slice(1).map(word => word[0] + word.slice(1)).join(' ')
 ---
 
-<section id="circle" class="px-8 w-full h-full border-t-8 border-[#007B96]  lg:px-0  py-[163px] relative  flex flex-col items-center justify-center">
-    <h1 class="uppercase text-center mb-[78px] font-bold text-[28px] lg:text-[42px]"><span class="bock border-b-8 border-[#007B96]">{name}</span> {newTitle}</h1>
+<section id="circle" class="px-8 w-full h-full border-t-8 border-[#006075]  lg:px-0  py-[163px] relative  flex flex-col items-center justify-center">
+    <h1 class="uppercase text-center mb-[78px] font-bold text-[28px] lg:text-[42px]"><span class="bock border-b-8 border-[#006075]">{name}</span> {newTitle}</h1>
     <ul class=" w-full max-w-[1440px] grid-cols-1 gap-12 grid place-items-center lg:grid-cols-5 lg:gap-28">
         {projects.map((project) => {
             return (
                 <li class="items-center justify-center">
                     <a class="" href={project.fields.url} target="_blank" title={project.fields.title} >
-                        <img class="h-[75px] " src={project.fields.logo.fields.file.url} width="200" height="200" />
+                        <img class="h-[75px] " src={project.fields.logo.fields.file.url} alt={`${project.fields.title} logo`} width="200" height="200" />
                     </a>
                 </li>
                 
