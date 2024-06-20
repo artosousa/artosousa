@@ -14,7 +14,17 @@ const {title, copy, background } = Astro.props
             <p class="w-full max-w-[925px]  text-[16px] lg:text-[19px] leading-[32px]  lg:leading-[35px]">{copy}</p>
        </div>
        <div class="text-left w-full lg:w-1/2">
-            FORM GOES HERE
+            <form name="contact" data-netlify="true">
+                <p>
+                    <label>Name <input type="text" name="name" /></label>
+                </p>
+                <p>
+                    <label>Email <input type="email" name="email" /></label>
+                </p>
+                <p>
+                    <button type="submit">Send</button>
+                </p>
+            </form>
        </div>
     </div>
 </section>
