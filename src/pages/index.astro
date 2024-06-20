@@ -55,6 +55,7 @@ interface HomePage {
 	ctaButtonText: EntryFieldTypes.Text,
 	ctaButtonLink: EntryFieldTypes.Text,
 	featuredTitle: EntryFieldTypes.Text,
+	featuredCopy: EntryFieldTypes.Text,
 	featuredProjects: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<featuredSkeleton>>,
 	circleTitle: EntryFieldTypes.Text,
 	circleProjects: EntryFieldTypes.Array<EntryFieldTypes.EntryLink<circleSkeleton>>,
@@ -77,9 +78,9 @@ const data = layout.items[0].fields
 	<main>
 		<Hero title={data?.headerTitle} copy={data.headerCopy} logo={(data.logo as Asset).fields?.file?.url}/>
 		<Cta title={data.ctaTitle} copy={data.ctaCopy} button={data.ctaButtonText} link={data.ctaButtonLink} />
-		<Featured title={data.featuredTitle} projects={data.featuredProjects} />
-		<Circle title={data.circleTitle} projects={data.circleProjects} />
+		<Featured title={data.featuredTitle} projects={data.featuredProjects} copy={data.featuredCopy} />
 		<Services services={data.services} />
+		<Circle title={data.circleTitle} projects={data.circleProjects} />
 		<Footer title={data.footerTitle} copy={data.footerCopy}  />
 	</main>
 </Layout>
